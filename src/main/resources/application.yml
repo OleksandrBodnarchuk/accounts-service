@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: accounts
+  devtools:
+    restart:
+      enabled: true
+server:
+  port: 0 # random port
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9191/eureka
+  instance:
+    preferIpAddress: false
