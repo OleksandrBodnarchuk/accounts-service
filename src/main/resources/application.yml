@@ -5,7 +5,7 @@ spring:
     restart:
       enabled: true
 server:
-  port: 0 # random port
+  port: ${PORT:0} # random port
 
 eureka:
   client:
@@ -13,3 +13,4 @@ eureka:
       defaultZone: http://localhost:9191/eureka
   instance:
     preferIpAddress: false
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
